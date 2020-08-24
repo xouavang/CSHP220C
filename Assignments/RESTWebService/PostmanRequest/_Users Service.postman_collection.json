@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "67a25732-649d-4915-8d53-56816f87d38e",
+		"name": "_Users Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{UserService}}/api/users",
+					"protocol": "http",
+					"host": [
+						"{{UserService}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Specific",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{UserService}}/api/users/912548d1-f5f8-45e2-8c8e-fd1ca7249582",
+					"protocol": "http",
+					"host": [
+						"{{UserService}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"912548d1-f5f8-45e2-8c8e-fd1ca7249582"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"lisa@email.com\",\r\n    \"password\" : \"lisa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{UserService}}/api/users",
+					"protocol": "http",
+					"host": [
+						"{{UserService}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Specific",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\" : \"steve2.0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{UserService}}/api/users/912548d1-f5f8-45e2-8c8e-fd1ca7249582",
+					"protocol": "http",
+					"host": [
+						"{{UserService}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"912548d1-f5f8-45e2-8c8e-fd1ca7249582"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEL Specific",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://{{UserService}}/api/users/1",
+					"protocol": "http",
+					"host": [
+						"{{UserService}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

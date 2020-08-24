@@ -1,0 +1,15 @@
+﻿@model LearningCenter.Website.Models.EnrollInClassViewModel
+
+@{
+    ViewBag.Title = "EnrollInClass";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Enroll In Class</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+    @Html.DropDownListFor(t => t.SelectedClassId, new SelectList(Model.AvailableClasses, "Value", "Text"), "Select..")
+    <input type="submit" value="Add Class" />
+}

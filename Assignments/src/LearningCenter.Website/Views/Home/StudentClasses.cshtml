@@ -1,0 +1,38 @@
+﻿@model LearningCenter.Website.Models.UserClassModel[]
+
+@{
+    ViewBag.Title = "StudentClasses";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    table {
+        width: 100%;
+    }
+
+    td, th {
+        border-top: 1px solid #dddddd;
+        border-bottom: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+</style>
+
+<h2>@ViewBag.Message</h2>
+@if (Model.Length > 0)
+{
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+        @foreach (var enrolledClass in Model)
+        {
+            <tr>
+                <td>@enrolledClass.ClassName</td>
+                <td>@enrolledClass.ClassDescription</td>
+                <td>@String.Format("{0:c}", @enrolledClass.ClassPrice)</td>
+            </tr>
+        }
+    </table>
+}

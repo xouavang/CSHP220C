@@ -1,0 +1,38 @@
+﻿@model LearningCenter.Website.Models.ClassesViewModel
+
+@{
+    ViewBag.Title = "ClassList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    table{
+        width: 100%;
+    }
+    td, th {
+        border-top: 1px solid #dddddd;
+        border-bottom: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+</style>
+
+<h2>@ViewBag.Message</h2>
+@if (Model.Classes.Length > 0)
+{
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+        @foreach (var aClass in Model.Classes)
+        {
+        <tr>
+            <td>@aClass.Name</td>
+            <td>@aClass.Description</td>
+            <td>@String.Format("{0:c}",@aClass.Price)</td>
+        </tr>
+        }
+    </table>
+}
+
